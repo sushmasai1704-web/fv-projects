@@ -1,0 +1,17 @@
+# SymbiYosys proof output directories
+**/cover/
+**/proof/
+**/*_bmc/
+**/*_prove/
+**/*.xml
+**/*.smtc
+**/*.smt2
+**/*.il
+**/*.log
+**/*.ys
+**/PASS
+**/FAIL
+**/status
+**/model/
+**/engine_0/
+**/src/
