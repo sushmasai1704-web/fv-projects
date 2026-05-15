@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 10
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal fsm_buggy.sv
+prep -top fsm_buggy
+
+[files]
+fsm_buggy.sv

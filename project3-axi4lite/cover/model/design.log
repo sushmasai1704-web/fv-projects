@@ -1,0 +1,704 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.37+1 (git sha1 37a6c9a09, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: axi4lite_slave.sv
+Parsing formal SystemVerilog input from `axi4lite_slave.sv' to AST representation.
+Storing AST representation for module `$abstract\axi4lite_slave'.
+Successfully finished Verilog frontend.
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\axi4lite_slave'.
+Generating RTLIL representation for module `\axi4lite_slave'.
+Warning: Replacing memory \regfile with list of registers. See axi4lite_slave.sv:54
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \axi4lite_slave
+
+2.2.2. Analyzing design hierarchy..
+Top module:  \axi4lite_slave
+Removing unused module `$abstract\axi4lite_slave'.
+Removed 1 unused modules.
+Module axi4lite_slave directly or indirectly contains formal properties -> setting "keep" attribute.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$axi4lite_slave.sv:199$189 in module axi4lite_slave.
+Marked 1 switch rules as full_case in process $proc$axi4lite_slave.sv:188$180 in module axi4lite_slave.
+Removed 1 dead cases from process $proc$axi4lite_slave.sv:89$62 in module axi4lite_slave.
+Marked 4 switch rules as full_case in process $proc$axi4lite_slave.sv:89$62 in module axi4lite_slave.
+Marked 4 switch rules as full_case in process $proc$axi4lite_slave.sv:45$49 in module axi4lite_slave.
+Removed a total of 1 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 54 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$290'.
+  Set init value: $formal$axi4lite_slave.sv:210$48_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$288'.
+  Set init value: $formal$axi4lite_slave.sv:205$47_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$286'.
+  Set init value: $formal$axi4lite_slave.sv:193$46_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$284'.
+  Set init value: $formal$axi4lite_slave.sv:182$45_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$282'.
+  Set init value: $formal$axi4lite_slave.sv:177$44_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$280'.
+  Set init value: $formal$axi4lite_slave.sv:169$43_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$278'.
+  Set init value: $formal$axi4lite_slave.sv:168$42_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$276'.
+  Set init value: $formal$axi4lite_slave.sv:167$41_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$274'.
+  Set init value: $formal$axi4lite_slave.sv:164$40_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$272'.
+  Set init value: $formal$axi4lite_slave.sv:164$39_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$270'.
+  Set init value: $formal$axi4lite_slave.sv:163$38_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$268'.
+  Set init value: $formal$axi4lite_slave.sv:160$37_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$266'.
+  Set init value: $formal$axi4lite_slave.sv:159$36_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$264'.
+  Set init value: $formal$axi4lite_slave.sv:158$35_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$262'.
+  Set init value: $formal$axi4lite_slave.sv:154$34_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$260'.
+  Set init value: $formal$axi4lite_slave.sv:150$33_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$258'.
+  Set init value: $formal$axi4lite_slave.sv:147$32_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$256'.
+  Set init value: $formal$axi4lite_slave.sv:146$31_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$254'.
+  Set init value: $formal$axi4lite_slave.sv:143$30_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$252'.
+  Set init value: $formal$axi4lite_slave.sv:142$29_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$250'.
+  Set init value: $formal$axi4lite_slave.sv:139$28_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$248'.
+  Set init value: $formal$axi4lite_slave.sv:138$27_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$246'.
+  Set init value: $formal$axi4lite_slave.sv:137$26_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$244'.
+  Set init value: $formal$axi4lite_slave.sv:131$25_EN = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$243'.
+  Set init value: \f_write_count = 2'00
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$242'.
+  Set init value: \f_wrote_once = 1'0
+Found init rule in `\axi4lite_slave.$proc$axi4lite_slave.sv:0$237'.
+  Set init value: \f_past_valid = 1'0
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \aresetn in `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+Found async reset \aresetn in `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~34 debug messages>
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$290'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$288'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$286'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$284'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$282'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$280'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$278'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$276'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$274'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$272'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$270'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$268'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$266'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$264'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$262'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$260'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$258'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$256'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$254'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$252'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$250'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$248'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$246'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$244'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$243'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$242'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$238'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$237'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:209$200'.
+     1/2: $0$formal$axi4lite_slave.sv:210$48_EN[0:0]$204
+     2/2: $0$formal$axi4lite_slave.sv:210$48_CHECK[0:0]$203
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:204$195'.
+     1/2: $0$formal$axi4lite_slave.sv:205$47_EN[0:0]$197
+     2/2: $0$formal$axi4lite_slave.sv:205$47_CHECK[0:0]$196
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:199$189'.
+     1/1: $0\f_write_count[1:0]
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:192$183'.
+     1/2: $0$formal$axi4lite_slave.sv:193$46_EN[0:0]$185
+     2/2: $0$formal$axi4lite_slave.sv:193$46_CHECK[0:0]$184
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:188$180'.
+     1/1: $0\f_wrote_once[0:0]
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:181$175'.
+     1/2: $0$formal$axi4lite_slave.sv:182$45_EN[0:0]$177
+     2/2: $0$formal$axi4lite_slave.sv:182$45_CHECK[0:0]$176
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:176$170'.
+     1/2: $0$formal$axi4lite_slave.sv:177$44_EN[0:0]$172
+     2/2: $0$formal$axi4lite_slave.sv:177$44_CHECK[0:0]$171
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+     1/36: $0$formal$axi4lite_slave.sv:137$26_EN[0:0]$100
+     2/36: $0$formal$axi4lite_slave.sv:137$26_CHECK[0:0]$99
+     3/36: $0$formal$axi4lite_slave.sv:138$27_EN[0:0]$102
+     4/36: $0$formal$axi4lite_slave.sv:138$27_CHECK[0:0]$101
+     5/36: $0$formal$axi4lite_slave.sv:139$28_EN[0:0]$104
+     6/36: $0$formal$axi4lite_slave.sv:139$28_CHECK[0:0]$103
+     7/36: $0$formal$axi4lite_slave.sv:142$29_EN[0:0]$106
+     8/36: $0$formal$axi4lite_slave.sv:142$29_CHECK[0:0]$105
+     9/36: $0$formal$axi4lite_slave.sv:143$30_EN[0:0]$108
+    10/36: $0$formal$axi4lite_slave.sv:143$30_CHECK[0:0]$107
+    11/36: $0$formal$axi4lite_slave.sv:146$31_EN[0:0]$110
+    12/36: $0$formal$axi4lite_slave.sv:146$31_CHECK[0:0]$109
+    13/36: $0$formal$axi4lite_slave.sv:147$32_EN[0:0]$112
+    14/36: $0$formal$axi4lite_slave.sv:147$32_CHECK[0:0]$111
+    15/36: $0$formal$axi4lite_slave.sv:150$33_EN[0:0]$114
+    16/36: $0$formal$axi4lite_slave.sv:150$33_CHECK[0:0]$113
+    17/36: $0$formal$axi4lite_slave.sv:154$34_EN[0:0]$116
+    18/36: $0$formal$axi4lite_slave.sv:154$34_CHECK[0:0]$115
+    19/36: $0$formal$axi4lite_slave.sv:158$35_EN[0:0]$118
+    20/36: $0$formal$axi4lite_slave.sv:158$35_CHECK[0:0]$117
+    21/36: $0$formal$axi4lite_slave.sv:159$36_EN[0:0]$120
+    22/36: $0$formal$axi4lite_slave.sv:159$36_CHECK[0:0]$119
+    23/36: $0$formal$axi4lite_slave.sv:160$37_EN[0:0]$122
+    24/36: $0$formal$axi4lite_slave.sv:160$37_CHECK[0:0]$121
+    25/36: $0$formal$axi4lite_slave.sv:163$38_EN[0:0]$124
+    26/36: $0$formal$axi4lite_slave.sv:163$38_CHECK[0:0]$123
+    27/36: $0$formal$axi4lite_slave.sv:164$39_EN[0:0]$126
+    28/36: $0$formal$axi4lite_slave.sv:164$39_CHECK[0:0]$125
+    29/36: $0$formal$axi4lite_slave.sv:164$40_EN[0:0]$128
+    30/36: $0$formal$axi4lite_slave.sv:164$40_CHECK[0:0]$127
+    31/36: $0$formal$axi4lite_slave.sv:167$41_EN[0:0]$130
+    32/36: $0$formal$axi4lite_slave.sv:167$41_CHECK[0:0]$129
+    33/36: $0$formal$axi4lite_slave.sv:168$42_EN[0:0]$132
+    34/36: $0$formal$axi4lite_slave.sv:168$42_CHECK[0:0]$131
+    35/36: $0$formal$axi4lite_slave.sv:169$43_EN[0:0]$134
+    36/36: $0$formal$axi4lite_slave.sv:169$43_CHECK[0:0]$133
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:130$76'.
+     1/2: $0$formal$axi4lite_slave.sv:131$25_EN[0:0]$78
+     2/2: $0$formal$axi4lite_slave.sv:131$25_CHECK[0:0]$77
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:127$75'.
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+     1/13: $4$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_DATA[31:0]$73
+     2/13: $3$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_DATA[31:0]$72
+     3/13: $3$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_ADDR[3:0]$71
+     4/13: $2$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_DATA[31:0]$69
+     5/13: $2$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_ADDR[3:0]$68
+     6/13: $1$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_DATA[31:0]$67
+     7/13: $1$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_ADDR[3:0]$66
+     8/13: $0\rd_state[1:0]
+     9/13: $0\ar_addr_lat[3:0]
+    10/13: $0\rvalid[0:0]
+    11/13: $0\rresp[1:0]
+    12/13: $0\rdata[31:0]
+    13/13: $0\arready[0:0]
+Creating decoders for process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+     1/29: $3$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_ADDR[3:0]$59
+     2/29: $3$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_DATA[31:0]$60
+     3/29: $2$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_DATA[31:0]$56
+     4/29: $2$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_ADDR[3:0]$55
+     5/29: $1$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_DATA[31:0]$54
+     6/29: $1$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_ADDR[3:0]$53
+     7/29: $1\i[31:0]
+     8/29: $0\regfile[15][31:0]
+     9/29: $0\regfile[14][31:0]
+    10/29: $0\regfile[13][31:0]
+    11/29: $0\regfile[12][31:0]
+    12/29: $0\regfile[11][31:0]
+    13/29: $0\regfile[10][31:0]
+    14/29: $0\regfile[9][31:0]
+    15/29: $0\regfile[8][31:0]
+    16/29: $0\regfile[7][31:0]
+    17/29: $0\regfile[6][31:0]
+    18/29: $0\regfile[5][31:0]
+    19/29: $0\regfile[4][31:0]
+    20/29: $0\regfile[3][31:0]
+    21/29: $0\regfile[2][31:0]
+    22/29: $0\regfile[1][31:0]
+    23/29: $0\regfile[0][31:0]
+    24/29: $0\wr_state[1:0]
+    25/29: $0\aw_addr_lat[3:0]
+    26/29: $0\bvalid[0:0]
+    27/29: $0\bresp[1:0]
+    28/29: $0\wready[0:0]
+    29/29: $0\awready[0:0]
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:129$23_CHECK' from process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$238'.
+No latch inferred for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:129$23_EN' from process `\axi4lite_slave.$proc$axi4lite_slave.sv:0$238'.
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:210$19$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:209$200'.
+  created $dff cell `$procdff$878' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:210$20$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:209$200'.
+  created $dff cell `$procdff$879' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:210$48_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:209$200'.
+  created $dff cell `$procdff$880' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:210$48_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:209$200'.
+  created $dff cell `$procdff$881' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:205$47_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:204$195'.
+  created $dff cell `$procdff$882' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:205$47_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:204$195'.
+  created $dff cell `$procdff$883' with positive edge clock.
+Creating register for signal `\axi4lite_slave.\f_write_count' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:199$189'.
+  created $dff cell `$procdff$884' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:193$46_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:192$183'.
+  created $dff cell `$procdff$885' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:193$46_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:192$183'.
+  created $dff cell `$procdff$886' with positive edge clock.
+Creating register for signal `\axi4lite_slave.\f_wrote_once' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:188$180'.
+  created $dff cell `$procdff$887' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:182$45_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:181$175'.
+  created $dff cell `$procdff$888' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:182$45_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:181$175'.
+  created $dff cell `$procdff$889' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:177$44_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:176$170'.
+  created $dff cell `$procdff$890' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:177$44_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:176$170'.
+  created $dff cell `$procdff$891' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:134$2$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$892' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:137$3$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$893' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:137$4$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$894' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:138$5$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$895' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:138$6$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$896' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:139$7$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$897' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:139$8$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$898' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:142$9$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$899' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:142$10$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$900' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:143$11$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$901' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:143$12$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$902' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:150$13$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$903' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:150$14$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$904' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:151$15$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$905' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:154$16$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$906' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:154$17$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$907' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$past$axi4lite_slave.sv:155$18$0' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$908' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:137$26_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$909' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:137$26_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$910' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:138$27_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$911' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:138$27_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$912' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:139$28_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$913' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:139$28_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$914' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:142$29_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$915' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:142$29_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$916' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:143$30_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$917' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:143$30_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$918' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:146$31_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$919' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:146$31_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$920' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:147$32_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$921' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:147$32_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$922' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:150$33_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$923' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:150$33_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$924' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:154$34_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$925' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:154$34_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$926' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:158$35_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$927' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:158$35_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$928' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:159$36_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$929' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:159$36_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$930' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:160$37_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$931' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:160$37_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$932' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:163$38_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$933' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:163$38_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$934' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:164$39_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$935' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:164$39_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$936' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:164$40_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$937' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:164$40_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$938' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:167$41_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$939' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:167$41_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$940' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:168$42_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$941' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:168$42_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$942' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:169$43_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$943' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:169$43_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+  created $dff cell `$procdff$944' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:131$25_CHECK' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:130$76'.
+  created $dff cell `$procdff$945' with positive edge clock.
+Creating register for signal `\axi4lite_slave.$formal$axi4lite_slave.sv:131$25_EN' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:130$76'.
+  created $dff cell `$procdff$946' with positive edge clock.
+Creating register for signal `\axi4lite_slave.\f_past_valid' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:127$75'.
+  created $dff cell `$procdff$947' with positive edge clock.
+Creating register for signal `\axi4lite_slave.\arready' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$948' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\rdata' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$949' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\rresp' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$950' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\rvalid' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$951' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\ar_addr_lat' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$952' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\rd_state' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$953' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_ADDR' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$954' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.$mem2reg_rd$\regfile$axi4lite_slave.sv:105$22_DATA' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+  created $adff cell `$procdff$955' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\awready' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$956' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\wready' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$957' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\bresp' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$958' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\bvalid' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$959' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\aw_addr_lat' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$960' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\wr_state' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$961' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\i' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$962' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[0]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$963' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[1]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$964' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[2]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$965' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[3]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$966' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[4]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$967' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[5]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$968' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[6]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$969' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[7]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$970' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[8]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$971' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[9]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$972' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[10]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$973' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[11]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$974' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[12]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$975' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[13]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$976' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[14]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$977' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.\regfile[15]' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$978' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_ADDR' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$979' with positive edge clock and negative level reset.
+Creating register for signal `\axi4lite_slave.$mem2reg_wr$\regfile$axi4lite_slave.sv:70$21_DATA' using process `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+  created $adff cell `$procdff$980' with positive edge clock and negative level reset.
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$290'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$288'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$286'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$284'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$282'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$280'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$278'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$276'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$274'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$272'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$270'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$268'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$266'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$264'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$262'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$260'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$258'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$256'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$254'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$252'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$250'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$248'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$246'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$244'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$243'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$242'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$238'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:0$237'.
+Found and cleaned up 1 empty switch in `\axi4lite_slave.$proc$axi4lite_slave.sv:209$200'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:209$200'.
+Found and cleaned up 1 empty switch in `\axi4lite_slave.$proc$axi4lite_slave.sv:204$195'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:204$195'.
+Found and cleaned up 2 empty switches in `\axi4lite_slave.$proc$axi4lite_slave.sv:199$189'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:199$189'.
+Found and cleaned up 1 empty switch in `\axi4lite_slave.$proc$axi4lite_slave.sv:192$183'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:192$183'.
+Found and cleaned up 2 empty switches in `\axi4lite_slave.$proc$axi4lite_slave.sv:188$180'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:188$180'.
+Found and cleaned up 1 empty switch in `\axi4lite_slave.$proc$axi4lite_slave.sv:181$175'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:181$175'.
+Found and cleaned up 1 empty switch in `\axi4lite_slave.$proc$axi4lite_slave.sv:176$170'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:176$170'.
+Found and cleaned up 15 empty switches in `\axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:133$81'.
+Found and cleaned up 1 empty switch in `\axi4lite_slave.$proc$axi4lite_slave.sv:130$76'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:130$76'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:127$75'.
+Found and cleaned up 4 empty switches in `\axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:89$62'.
+Found and cleaned up 5 empty switches in `\axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+Removing empty process `axi4lite_slave.$proc$axi4lite_slave.sv:45$49'.
+Cleaned up 34 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi4lite_slave.
+<suppressed ~26 debug messages>
+
+2.4. Executing FUTURE pass.
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi4lite_slave.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+Removed 34 unused cells and 299 unused wires.
+<suppressed ~37 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module axi4lite_slave...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi4lite_slave.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi4lite_slave'.
+<suppressed ~141 debug messages>
+Removed a total of 47 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi4lite_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$474.
+    dead port 2/2 on $mux $procmux$476.
+Removed 2 multiplexer ports.
+<suppressed ~77 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi4lite_slave.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi4lite_slave'.
+<suppressed ~48 debug messages>
+Removed a total of 16 cells.
+
+2.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+Removed 0 unused cells and 65 unused wires.
+<suppressed ~1 debug messages>
+
+2.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi4lite_slave.
+
+2.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \axi4lite_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~70 debug messages>
+
+2.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \axi4lite_slave.
+Performed a total of 0 changes.
+
+2.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi4lite_slave'.
+Removed a total of 0 cells.
+
+2.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+
+2.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi4lite_slave.
+
+2.8.14. Finished OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from port B of cell axi4lite_slave.$eq$axi4lite_slave.sv:159$158 ($eq).
+Removed top 1 bits (of 2) from port B of cell axi4lite_slave.$eq$axi4lite_slave.sv:164$161 ($eq).
+Removed top 30 bits (of 32) from port B of cell axi4lite_slave.$lt$axi4lite_slave.sv:201$192 ($lt).
+Removed top 31 bits (of 32) from port B of cell axi4lite_slave.$add$axi4lite_slave.sv:202$194 ($add).
+Removed top 30 bits (of 32) from port Y of cell axi4lite_slave.$add$axi4lite_slave.sv:202$194 ($add).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$466_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$467_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$468_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$469_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell axi4lite_slave.$procmux$470_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell axi4lite_slave.$procmux$471_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell axi4lite_slave.$procmux$472_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$673_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$691_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$710_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell axi4lite_slave.$procmux$730_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell axi4lite_slave.$procmux$751_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell axi4lite_slave.$procmux$773_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell axi4lite_slave.$procmux$796_CMP0 ($eq).
+Removed top 30 bits (of 32) from wire axi4lite_slave.$add$axi4lite_slave.sv:202$194_Y.
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi4lite_slave.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi4lite_slave'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+
+2.12.4. Finished fast OPT passes.
+
+2.13. Printing statistics.
+
+=== axi4lite_slave ===
+
+   Number of wires:                330
+   Number of wire bits:           2534
+   Number of public wires:          40
+   Number of public wire bits:     612
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                345
+     $add                            1
+     $adff                          27
+     $assert                        15
+     $assume                         5
+     $cover                          5
+     $dff                           63
+     $eq                            36
+     $initstate                      1
+     $logic_and                     26
+     $logic_not                     19
+     $lt                             1
+     $mux                          140
+     $pmux                           6
+
+2.14. Executing CHECK pass (checking for obvious problems).
+Checking module axi4lite_slave...
+Found and reported 0 problems.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1. Analyzing design hierarchy..
+Top module:  \axi4lite_slave
+
+3.2. Analyzing design hierarchy..
+Top module:  \axi4lite_slave
+Removed 0 unused modules.
+Module axi4lite_slave directly or indirectly contains formal properties -> setting "keep" attribute.
+
+4. Executing jny backend.
+
+5. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 7e182bccca, CPU: user 0.18s system 0.01s, MEM: 15.43 MB peak
+Yosys 0.37+1 (git sha1 37a6c9a09, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
+Time spent: 20% 2x check (0 sec), 19% 5x opt_clean (0 sec), ...

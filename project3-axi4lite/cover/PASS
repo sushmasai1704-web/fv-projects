@@ -1,0 +1,11 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc z3) returned pass
+cover trace: engine_0/trace0.vcd
+  reached cover statement axi4lite_slave.$cover$axi4lite_slave.sv:177$232 at axi4lite_slave.sv:177.37-178.36 in step 5
+  reached cover statement axi4lite_slave.$cover$axi4lite_slave.sv:182$233 at axi4lite_slave.sv:182.37-183.36 in step 5
+cover trace: engine_0/trace1.vcd
+  reached cover statement axi4lite_slave.$cover$axi4lite_slave.sv:193$234 at axi4lite_slave.sv:193.53-194.36 in step 6
+  reached cover statement axi4lite_slave.$cover$axi4lite_slave.sv:210$236 at axi4lite_slave.sv:210.72-211.54 in step 6
+cover trace: engine_0/trace2.vcd
+  reached cover statement axi4lite_slave.$cover$axi4lite_slave.sv:205$235 at axi4lite_slave.sv:205.37-206.38 in step 10

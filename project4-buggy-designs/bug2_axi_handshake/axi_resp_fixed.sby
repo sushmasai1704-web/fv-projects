@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 15
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal axi_resp_fixed.sv
+prep -top axi_resp_fixed
+
+[files]
+axi_resp_fixed.sv

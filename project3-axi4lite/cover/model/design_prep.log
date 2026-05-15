@@ -1,0 +1,111 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.37+1 (git sha1 37a6c9a09, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
+
+
+-- Executing script file `design_prep.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module axi4lite_slave.
+Found 0 SCCs.
+
+3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+4. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+5. Executing ASYNC2SYNC pass.
+Replacing axi4lite_slave.$procdff$978 ($adff): ARST=\aresetn, D=$0\regfile[15][31:0], Q=\regfile[15]
+Replacing axi4lite_slave.$procdff$977 ($adff): ARST=\aresetn, D=$0\regfile[14][31:0], Q=\regfile[14]
+Replacing axi4lite_slave.$procdff$976 ($adff): ARST=\aresetn, D=$0\regfile[13][31:0], Q=\regfile[13]
+Replacing axi4lite_slave.$procdff$975 ($adff): ARST=\aresetn, D=$0\regfile[12][31:0], Q=\regfile[12]
+Replacing axi4lite_slave.$procdff$974 ($adff): ARST=\aresetn, D=$0\regfile[11][31:0], Q=\regfile[11]
+Replacing axi4lite_slave.$procdff$973 ($adff): ARST=\aresetn, D=$0\regfile[10][31:0], Q=\regfile[10]
+Replacing axi4lite_slave.$procdff$972 ($adff): ARST=\aresetn, D=$0\regfile[9][31:0], Q=\regfile[9]
+Replacing axi4lite_slave.$procdff$971 ($adff): ARST=\aresetn, D=$0\regfile[8][31:0], Q=\regfile[8]
+Replacing axi4lite_slave.$procdff$970 ($adff): ARST=\aresetn, D=$0\regfile[7][31:0], Q=\regfile[7]
+Replacing axi4lite_slave.$procdff$969 ($adff): ARST=\aresetn, D=$0\regfile[6][31:0], Q=\regfile[6]
+Replacing axi4lite_slave.$procdff$968 ($adff): ARST=\aresetn, D=$0\regfile[5][31:0], Q=\regfile[5]
+Replacing axi4lite_slave.$procdff$967 ($adff): ARST=\aresetn, D=$0\regfile[4][31:0], Q=\regfile[4]
+Replacing axi4lite_slave.$procdff$966 ($adff): ARST=\aresetn, D=$0\regfile[3][31:0], Q=\regfile[3]
+Replacing axi4lite_slave.$procdff$965 ($adff): ARST=\aresetn, D=$0\regfile[2][31:0], Q=\regfile[2]
+Replacing axi4lite_slave.$procdff$964 ($adff): ARST=\aresetn, D=$0\regfile[1][31:0], Q=\regfile[1]
+Replacing axi4lite_slave.$procdff$963 ($adff): ARST=\aresetn, D=$0\regfile[0][31:0], Q=\regfile[0]
+Replacing axi4lite_slave.$procdff$961 ($adff): ARST=\aresetn, D=$0\wr_state[1:0], Q=\wr_state
+Replacing axi4lite_slave.$procdff$960 ($adff): ARST=\aresetn, D=$0\aw_addr_lat[3:0], Q=\aw_addr_lat
+Replacing axi4lite_slave.$procdff$959 ($adff): ARST=\aresetn, D=$0\bvalid[0:0], Q=\bvalid
+Replacing axi4lite_slave.$procdff$958 ($adff): ARST=\aresetn, D=$0\bresp[1:0], Q=\bresp
+Replacing axi4lite_slave.$procdff$957 ($adff): ARST=\aresetn, D=$0\wready[0:0], Q=\wready
+Replacing axi4lite_slave.$procdff$956 ($adff): ARST=\aresetn, D=$0\awready[0:0], Q=\awready
+Replacing axi4lite_slave.$procdff$953 ($adff): ARST=\aresetn, D=$0\rd_state[1:0], Q=\rd_state
+Replacing axi4lite_slave.$procdff$951 ($adff): ARST=\aresetn, D=$0\rvalid[0:0], Q=\rvalid
+Replacing axi4lite_slave.$procdff$950 ($adff): ARST=\aresetn, D=$0\rresp[1:0], Q=\rresp
+Replacing axi4lite_slave.$procdff$949 ($adff): ARST=\aresetn, D=$0\rdata[31:0], Q=\rdata
+Replacing axi4lite_slave.$procdff$948 ($adff): ARST=\aresetn, D=$0\arready[0:0], Q=\arready
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+Removed 8 unused cells and 8 unused wires.
+<suppressed ~9 debug messages>
+
+7. Executing FORMALFF pass.
+
+8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module axi4lite_slave...
+Found and reported 0 problems.
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module axi4lite_slave.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\axi4lite_slave'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+
+11.5. Finished fast OPT passes.
+
+12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \axi4lite_slave..
+Removed 0 unused cells and 105 unused wires.
+<suppressed ~1 debug messages>
+
+13. Executing RTLIL backend.
+Output filename: ../model/design_prep.il
+
+End of script. Logfile hash: 1f8ecc4236, CPU: user 0.09s system 0.01s, MEM: 15.41 MB peak
+Yosys 0.37+1 (git sha1 37a6c9a09, clang 14.0.0-1ubuntu1.1 -fPIC -Os)
+Time spent: 36% 4x opt_clean (0 sec), 25% 1x check (0 sec), ...

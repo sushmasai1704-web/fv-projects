@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 15
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal counter_fixed.sv
+prep -top counter
+
+[files]
+counter_fixed.sv

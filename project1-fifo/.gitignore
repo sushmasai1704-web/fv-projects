@@ -1,0 +1,4 @@
+fifo/
+fifo_buggy/
+*.vcd
+*.yw

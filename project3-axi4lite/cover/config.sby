@@ -1,0 +1,13 @@
+[options]
+mode cover
+depth 30
+
+[engines]
+smtbmc z3
+
+[script]
+read -formal axi4lite_slave.sv
+prep -top axi4lite_slave
+
+[files]
+axi4lite_slave.sv
